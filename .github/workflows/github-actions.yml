@@ -13,7 +13,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Build
-        run: mvn --batch-mode -DskipTests package -f /pom.xml
+        run: mvn --batch-mode -DskipTests package -f pom.xml
 
       - name: Test
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
