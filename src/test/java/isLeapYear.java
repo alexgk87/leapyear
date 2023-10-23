@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -8,6 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class isLeapYear {
+
+    @Test
+    public void test_that_will_fail() {
+        assertTrue(DivideBy.isLeapYear(1999));
+    }
 
     @ParameterizedTest
     @MethodSource("leapYears")
