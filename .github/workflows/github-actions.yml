@@ -27,4 +27,5 @@ jobs:
         with: 
           name: Maven Tests
           reporter: java-junit
+          path: target/surefire-reports/test.xml
           fail-on-error: true
