@@ -1,5 +1,5 @@
-name: GitHub Actions
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: oblig3_gh_actions
+run-name: ${{ github.actor }} sin første GitHub Actions
 on: [push]
 jobs:
   Explore-GitHub-Actions:
