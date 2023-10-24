@@ -33,9 +33,11 @@ jobs:
       
     - name: Run tests
       run: mvn -B test --file pom.xml
+
+    - run: mkdir -p target/surefire-reports
       
     - name: Upload Test Reports
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: test-reports
         path: target/surefire-reports
