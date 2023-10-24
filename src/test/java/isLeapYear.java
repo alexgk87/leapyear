@@ -13,6 +13,7 @@ public class isLeapYear {
     @Test
     public void test_that_will_fail() {
         assertTrue(DivideBy.isLeapYear(1999));
+        assertFalse(DivideBy.isLeapYear(2000));
     }
 
     @ParameterizedTest
