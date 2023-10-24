@@ -10,12 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class isLeapYearTests {
 
-    @Test
-    public void test_that_will_fail() {
-        assertTrue(DivideBy.isLeapYear(1999));
-        assertFalse(DivideBy.isLeapYear(2000));
-    }
-
     @ParameterizedTest
     @MethodSource("leapYears")
     public void test_years_divided_by_four_and_not_hundred_is_a_leap_year(int input) {
@@ -40,7 +34,12 @@ public class isLeapYearTests {
         assertFalse(DivideBy.isLeapYear(input));
     }
 
-    public static Stream leapYears() {
+    /*@Test
+    public void test_that_will_fail() {
+        assertFalse(DivideBy.isLeapYear(1999));
+    }*/
+
+    public static Stream<Arguments> leapYears() {
         return Stream.of(
                 Arguments.of(2000),
                 Arguments.of(2004),
@@ -48,7 +47,7 @@ public class isLeapYearTests {
         );
     }
 
-    public static Stream notLeapYears() {
+    public static Stream<Arguments> notLeapYears() {
         return Stream.of(
                 Arguments.of(2001),
                 Arguments.of(1900),
