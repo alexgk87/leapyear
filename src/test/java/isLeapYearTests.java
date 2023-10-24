@@ -34,11 +34,6 @@ public class isLeapYearTests {
         assertFalse(DivideBy.isLeapYear(input));
     }
 
-    @Test
-    public void test_that_will_fail() {
-        assertTrue(DivideBy.isLeapYear(1999));
-    }
-
     public static Stream<Arguments> leapYears() {
         return Stream.of(
                 Arguments.of(2000),
