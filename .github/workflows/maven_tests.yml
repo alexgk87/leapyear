@@ -30,5 +30,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
     - name: Run tests
       run: mvn -B test --file pom.xml
+      
+    - name: Upload Test Reports
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-reports
+        path: target/surefire-reports
