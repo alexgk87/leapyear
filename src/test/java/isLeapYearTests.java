@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class isLeapYear {
+public class isLeapYearTests {
 
     @Test
     public void test_that_will_fail() {
